@@ -1,14 +1,14 @@
-﻿// Connect to the database 
-using Dapper;
-using Microsoft.Data.SqlClient;
+﻿using DapperLearning.Examples;
+using System.Text.Json;
 
-var connectionString = "";
+//E01_QuickStart.Run();
 
-using (var connection = new SqlConnection(connectionString))
+await E02_QueryData.Run();
+
+static partial class Program
 {
-    // Create a query that retrieves all books with an author name of "John Smith"    
-    var sql = "SELECT * FROM Books WHERE Author = @authorName";
-
-    // Use the Query method to execute the query and return a list of objects    
-    var books = connection.Query<object>(sql, new { authorName = "John Smith" }).ToList();
+    public static JsonSerializerOptions JsonDefault = new JsonSerializerOptions
+    {
+        WriteIndented = true
+    };
 }

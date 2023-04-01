@@ -1,0 +1,20 @@
+version: "3.8"
+
+services:
+
+  database:
+    image: dapper-learning:database-1.0
+    build:
+      context: .
+      dockerfile: misc/database/Dockerfile
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=z@123456!
+      - MSSQL_PID=Express
+    ports:
+      - target: 1433
+        published: 1434
+
+networks:
+  default:
+    name: dapper-shared-network
