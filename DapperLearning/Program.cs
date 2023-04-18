@@ -5,7 +5,9 @@ using System.Text.Json;
 
 //await E02_QueryData.Run();
 
-await E03_MappingConfig.Run();
+//await E03_MappingConfig.Run();
+
+await E04_ExecuteCommand.Run();
 
 static partial class Program
 {
