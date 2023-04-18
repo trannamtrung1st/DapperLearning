@@ -9,7 +9,9 @@ using System.Text.Json;
 
 //await E04_ExecuteCommand.Run();
 
-await E05_ExecuteReader.Run();
+//await E05_ExecuteReader.Run();
+
+await E06_Relationships.Run();
 
 static partial class Program
 {

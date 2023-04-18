@@ -8,4 +8,6 @@ public class ProductEntity
     public int CategoryId { get; set; }
     public int ModelYear { get; set; }
     public decimal ListPrice { get; set; }
+
+    public CategoryEntity Category { get; set; }
 }
