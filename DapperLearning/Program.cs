@@ -11,7 +11,9 @@ using System.Text.Json;
 
 //await E05_ExecuteReader.Run();
 
-await E06_Relationships.Run();
+//await E06_Relationships.Run();
+
+await E07_Parameters.Run();
 
 static partial class Program
 {
