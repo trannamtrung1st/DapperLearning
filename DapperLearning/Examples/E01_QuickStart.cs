@@ -11,11 +11,9 @@ namespace DapperLearning.Examples
         {
             Dapper.DefaultTypeMap.MatchNamesWithUnderscores = true;
 
-            var connectionString = "Server=localhost,1434;Database=BikeStores;Trusted_Connection=False;User Id=sa;Password=z@123456!;MultipleActiveResultSets=true;TrustServerCertificate=True";
-
             IEnumerable<ProductEntity> results;
 
-            using (var connection = new SqlConnection(connectionString))
+            using (var connection = new SqlConnection(Program.ConnectionString))
             {
                 var sql = @"
 SELECT * FROM production.products 

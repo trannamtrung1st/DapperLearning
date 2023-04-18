@@ -8,13 +8,11 @@ namespace DapperLearning.Examples
 {
     public static class E02_QueryData
     {
-        static string ConnectionString = "Server=localhost,1434;Database=BikeStores;Trusted_Connection=False;User Id=sa;Password=z@123456!;MultipleActiveResultSets=true;TrustServerCertificate=True";
-
         public static async Task Run()
         {
             Dapper.DefaultTypeMap.MatchNamesWithUnderscores = true;
 
-            using (var connection = new SqlConnection(ConnectionString))
+            using (var connection = new SqlConnection(Program.ConnectionString))
             {
                 await QueryScalar(connection);
 

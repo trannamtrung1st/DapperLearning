@@ -3,10 +3,14 @@ using System.Text.Json;
 
 //E01_QuickStart.Run();
 
-await E02_QueryData.Run();
+//await E02_QueryData.Run();
+
+await E03_MappingConfig.Run();
 
 static partial class Program
 {
+    public const string ConnectionString = "Server=localhost,1434;Database=BikeStores;Trusted_Connection=False;User Id=sa;Password=z@123456!;MultipleActiveResultSets=true;TrustServerCertificate=True";
+
     public static JsonSerializerOptions JsonDefault = new JsonSerializerOptions
     {
         WriteIndented = true
