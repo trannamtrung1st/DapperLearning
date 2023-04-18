@@ -7,7 +7,9 @@ using System.Text.Json;
 
 //await E03_MappingConfig.Run();
 
-await E04_ExecuteCommand.Run();
+//await E04_ExecuteCommand.Run();
+
+await E05_ExecuteReader.Run();
 
 static partial class Program
 {
