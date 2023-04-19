@@ -15,7 +15,9 @@ using System.Text.Json;
 
 //await E07_Parameters.Run();
 
-await E08_Others.Run();
+//await E08_Others.Run();
+
+await E09_Extensions.Run();
 
 static partial class Program
 {
