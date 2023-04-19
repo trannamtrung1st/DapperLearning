@@ -13,7 +13,9 @@ using System.Text.Json;
 
 //await E06_Relationships.Run();
 
-await E07_Parameters.Run();
+//await E07_Parameters.Run();
+
+await E08_Others.Run();
 
 static partial class Program
 {
