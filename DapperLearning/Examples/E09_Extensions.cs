@@ -75,11 +75,11 @@ FROM production.products AS p
     /**where**/ 
     /**orderby**/");
 
+            var categoryIdx = types.IndexOf(typeof(CategoryEntity));
             var products = await connection.QueryAsync(template.RawSql, types: types.ToArray(), map: (data) =>
             {
                 var product = data[0] as ProductEntity;
 
-                var categoryIdx = types.IndexOf(typeof(CategoryEntity));
                 if (categoryIdx > -1)
                 {
                     var category = data[categoryIdx] as CategoryEntity;
